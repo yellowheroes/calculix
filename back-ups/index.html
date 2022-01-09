@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculix</title>
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <!-- end google font -->
+    <script src="calculix.js"></script>
+    <link rel="stylesheet" href="./assets/css/calculix.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+          integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div id="empty-top">
+    <div id="operator-select">
+        <select id='mode'>
+            <option value="">Je veux changer mon jeu...</option>
+            <option value="*">multiplication</option>
+            <option value="+">addition</option>
+            <option value="-">soustraction</option>
+        </select>
+    </div>
+    <div id='table-select'>
+        <select id='table-choice'>
+            <option value="">Je choisis ma table!</option>
+            <option value="1">Table de 1</option>
+            <option value="2">Table de 2</option>
+            <option value="3">Table de 3</option>
+            <option value="4">Table de 4</option>
+            <option value="5">Table de 5</option>
+            <option value="6">Table de 6</option>
+            <option value="7">Table de 7</option>
+            <option value="8">Table de 8</option>
+            <option value="9">Table de 9</option>
+            <option value="10">Table de 10</option>
+        </select>
+    </div>
+    <div id='sequential-select'>
+        <select id='sequential-choice'>
+            <option value="0">al&#233atoire</option>
+            <option value="1">s&#233quentiel</option>
+        </select>
+    </div>
+</div>
+<div id="container">
+    <!-- font-type calculix-logo.png: curlz mt -->
+    <div id="header"><img src="./assets/images/calculix-logo.png" style="max-width: 100%;"/></div>
+    <div id="number-one"><span id="one">0</span></div>
+    <div id="op"><span id="operator"></span></div>
+    <div id="number-two"><span id="two">0</span></div>
+    <div id="equals"><span>=</span></div>
+    <div id="answer">
+        <input type="text" name="answer" id="answer-input">
+    </div>
+    <div>
+        <input type="button" name="submit" id="submit" value="Check!">
+    </div>
+    <div id="score">Score: 0 / 0</div>
+    <div id="msg"></div>
+    <div id="next">
+        <input type="button" name="skip" id="skip" value="Suivant!">
+    </div>
+</div>
+<!-- font-type numbers.png: curlz mt
+<div id="empty-bottom"><img src="./assets/images/numbers.png" /></div>
+-->
+<audio id="win">
+    <source src="./assets/sound/applause-short.mp3">
+</audio>
+
+<audio id="lose">
+    <source src="./assets/sound/sad-trombone-short.mp3">
+</audio>
+
+</body>
+</html>

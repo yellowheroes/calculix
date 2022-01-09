@@ -1,0 +1,8 @@
+= Notes
+
+2021/02/28
+branch: sequentialtables used to create option for training multiplication tables in sequential mode (as opposed to random mode which is default).
+
+Branch 'sequentialtables': merged into master on 2021/02/28.
+Branch 'sequentialtables': NOT yet deleted on 2021/02/28.
+
