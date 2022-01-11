@@ -1,0 +1,10 @@
+# ignore all
+*
+
+# but allow files in sub-directories to be tracked
+!*/
+
+# whitelist - do track these files
+!.gitignore
+!/calculix.js
+!/index.html

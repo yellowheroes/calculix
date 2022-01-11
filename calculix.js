@@ -22,7 +22,6 @@ window.addEventListener('load', function () {
     document.querySelector('#operator-select').addEventListener('change', setMode); // user can select *, + or - ('mode')
     document.querySelector('#table-select').addEventListener('change', setTable); // user can select a table when in multiplication 'mode'
     document.querySelector('#sequential-select').addEventListener('change', setSequential); // user can train table sequentially when in multiplication 'mode'
-
     document.addEventListener("keydown", enterPress); // can also press enter to verify answer
     document.querySelector('#submit').addEventListener('click', verifyAnswer); // verify answer
     document.querySelector('#skip').addEventListener('click', skipChallenge); // skip a challenge
@@ -45,7 +44,7 @@ function verifyAnswer(evt) {
             result = Number(challenge.numberOne) - Number(challenge.numberTwo);
     }
 
-    if (answer === result) {
+    if (answer == result) {
         success();
         input.value = ''; // clear input
         challenge.rnd = true; // generate new random numbers, answer was correct
@@ -59,7 +58,7 @@ function verifyAnswer(evt) {
     }
 }
 
-function newChallenge(random = true) {
+function newChallenge() {
     document.querySelector('#answer-input').focus();
     if (challenge.count === 10) refresh(); // new 'game' after 10 challenges, reset challenge object to initial state
     clearMsg(); // empty message box
@@ -187,7 +186,7 @@ function setSequential() {
     challenge.sequential = false; // default we use random table training
     let sequentialChoice = document.querySelector('#sequential-choice');
     let selectedSequential = sequentialChoice.options[sequentialChoice.selectedIndex].value;
-    if (selectedSequential === 1) {
+    if (selectedSequential == 1) {
         challenge.sequential = true; // set flag, user wants to train a specific table sequentially
         refresh(); // reset challenge object, clear score board to start training tables in sequential mode
     }
