@@ -196,6 +196,7 @@ function setSequential() {
 
 
 /*
+ * DELETETHISTEXT
  * User can switch instantaneously between multiplications(*), additions(+) and subtractions(-)
  * Use setMode() to set the operator 'mode' to: '*', or '+' or '-'
  * When in '*' mode, we show the table select box, when in '+' or '-' we hide the box
