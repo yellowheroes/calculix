@@ -12,6 +12,7 @@ let challenge = {
     rnd: true, // true == generate random numbers (false if answer was not correct, i.e. run same numbers again)
     sequential: false, // this can be set to true to train multiplication tables sequentially (1x3, 2x3, 3x3 etc.)
     sequentialNumber: 0, // keep track of the sequential number for sequential table training
+    randomNumber: 0,
 }
 
 /* on page load: start listening for events (answers) */
@@ -227,7 +228,9 @@ function getNumbersSubtraction() {
 }
 
 function getRandomNumber() {
+    do {
     let randomNumber = (Math.floor(Math.random() * 10)) + 1; // number 1-9
+    } while (randomNumber === challenge.randomNumber) // never same number twice in a row
     return randomNumber;
 }
 
