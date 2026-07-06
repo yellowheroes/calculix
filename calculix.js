@@ -228,9 +228,11 @@ function getNumbersSubtraction() {
 }
 
 function getRandomNumber() {
+    let randomNumber = 0;
     do {
-    let randomNumber = (Math.floor(Math.random() * 10)) + 1; // number 1-9
-    } while (randomNumber === challenge.randomNumber) // never same number twice in a row
+    randomNumber = (Math.floor(Math.random() * 10)) + 1; // number 1-9
+    } while (randomNumber == challenge.randomNumber) // never same number twice in a row
+    challenge.randomNumber = randomNumber; // cache last random number
     return randomNumber;
 }
 
